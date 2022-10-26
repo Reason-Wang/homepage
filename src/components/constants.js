@@ -7,6 +7,9 @@ import {useMediaQuery} from "@mui/material";
 export const infoStyle = {
     margin: "20px",
     marginRight: "60px",
+    width: 200,
+    display: "flex",
+
     signature:{
       fontSize: "26px",
         margin: "10px",

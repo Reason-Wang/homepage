@@ -24,7 +24,7 @@ export const Experience=() => {
         local_paperStyle.width = 560
     }
     else if (width > 600) {
-        local_paperStyle.width = width * 0.8;
+        local_paperStyle.width = width * 0.7;
     }
     else{
         local_paperStyle.width = 400;

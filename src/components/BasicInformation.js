@@ -12,18 +12,37 @@ import {useWindowSize} from "./Components";
 export const Signature = () =>{
     return (
         <Grid item justifyContent="flex-start">
-            <Breadcrumbs aria-label="breadcrumb">
-                <Typography sx={infoStyle.signature} color="textPrimary">Renxi Wang </Typography>
-            </Breadcrumbs>
+            <div style={{backgroundColor: "#fff", margin: 0, top: 0, position: "relative", width: "100%", height: "80px", display: "flex", alignItems: "center", justifyContent: "center"}}>
+                <Grid item>
+                    <p style={{margin: 0, color: "#888", fontSize: "24px", fontWeight: "bold"}}>Renxi Wang</p>
+                </Grid>
+                <Grid item>
+                    <p></p>
+                </Grid>
+            </div>
         </Grid>
     )
 }
 
 export const BasicInfoDisplay = () =>{
+    const [width, height] = useWindowSize();
+    var local_infoStyle = structuredClone(infoStyle)
+    if (width > 700){
+        local_infoStyle.width = 200
+    }
+    else if (width > 200) {
+        local_infoStyle.width = width * 0.3;
+    }
+    else{
+        local_infoStyle.width = 100;
+    }
+    local_infoStyle.avatar.width = local_infoStyle.width * 1
+    local_infoStyle.avatar.height = local_infoStyle.width * 1
     return (
-        // <Grid item>
-        <Box sx={infoStyle}>
-            <Avatar sx={infoStyle.avatar} >
+        <Grid item>
+            <div style={local_infoStyle}>
+            <Paper elevation={0} square={true}>
+            <Avatar sx={local_infoStyle.avatar} >
                 OP
             </Avatar>
             <p style={infoStyle.sign}>Undergraduate, Northeastern University</p>
@@ -36,8 +55,9 @@ export const BasicInfoDisplay = () =>{
                     </div>
                 )
             })}
-        </Box>
-        // </Grid>
+            </Paper>
+        </div>
+        </Grid>
     )
 }
 
@@ -49,7 +69,7 @@ export const AboutMe = () => {
         local_paperStyle.width = 560
     }
     else if (width > 600) {
-        local_paperStyle.width = width * 0.8;
+        local_paperStyle.width = width * 0.7;
     }
     else{
         local_paperStyle.width = 400;

@@ -10,7 +10,7 @@ import {BottomBanner, Occupation} from "./components/Components";
 
 function App() {
   return (
-      <Grid className="App" container direction="column" alignItems="center" justifyContent="left">
+      <Grid className="App" container direction="column" justifyContent="left">
       {/*//  <div style={{display: "flex", flexDirection: "column",  justifyContent: "center"}}>*/}
       {/*    <Grid item direction="column" justifyContent="center" alignItems="center">*/}
 
