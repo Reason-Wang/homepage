@@ -10,16 +10,21 @@ import {useLayoutEffect, useState} from "react";
 import {useWindowSize} from "./Components";
 
 export const Signature = () =>{
+    const [width, height] = useWindowSize();
+    var width_ratio = "70%";
+    if(width < 500){
+        width_ratio = "50%"
+    }
     return (
-        <Grid item justifyContent="flex-start">
-            <div style={{backgroundColor: "#fff", margin: 0, top: 0, position: "relative", width: "100%", height: "80px", display: "flex", alignItems: "center", justifyContent: "center"}}>
+        <Grid item direction="row" justifyContent="flex-start" sx={{backgroundColor: "#fff", margin: 0, width: "100%", height: "60px", display: "flex", justifyContent: "center", alignItems: "center"}}>
+            {/*<div }>*/}
                 <Grid item>
                     <p style={{margin: 0, color: "#888", fontSize: "24px", fontWeight: "bold"}}>Renxi Wang</p>
                 </Grid>
-                <Grid item>
+                <Grid item sx={{width: width_ratio}}>
                     <p></p>
                 </Grid>
-            </div>
+            {/*</div>*/}
         </Grid>
     )
 }
@@ -65,7 +70,7 @@ export const BasicInfoDisplay = () =>{
 export const AboutMe = () => {
     const [width, height] = useWindowSize();
     var local_paperStyle = structuredClone(paperStyle)
-    if (width > 560){
+    if (width > 600){
         local_paperStyle.width = 560
     }
     else if (width > 400) {
@@ -74,18 +79,25 @@ export const AboutMe = () => {
     else{
         local_paperStyle.width = 280;
     }
+    if (width < 500 && width > 400)
+    {
+        local_paperStyle.height += 500 - width;
+    }
+    else if(width < 400){
+        local_paperStyle.height += 100
+    }
     return (
-        <Grid item>
-                <div
-                    style={local_paperStyle}
-                >
-                    <Paper elevation={0} square={true}>
+        <Grid item sx={local_paperStyle}>
+                {/*<div*/}
+                {/*    style={local_paperStyle}*/}
+                {/*>*/}
+                {/*    <Paper elevation={0} square={true}>*/}
                         <h3 style={paperStyle.label}>About Me</h3>
                         <div style={infoStyle.about}>
                             <p>I am a senior student in School of Computer Science and Engineering of Northeastern University, China. My interests span from information retrieval to question answering, along with reinforcement learning, meachine learning.</p>
                         </div>
-                    </Paper>
-                </div>
+                    {/*</Paper>*/}
+                {/*// </div>*/}
         </Grid>
     )
 }

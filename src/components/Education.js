@@ -1,6 +1,6 @@
 import Grid from "@mui/material/Grid";
 import {Box} from "@mui/material";
-import {paperStyle, educationStyle} from "./constants";
+import {paperStyle, educationStyle, threshholds} from "./constants";
 import Paper from "@mui/material/Paper";
 import * as React from "react";
 import NEU from "../images/NEU.png"
@@ -20,27 +20,27 @@ const EducationItem = () =>{
     )
 }
 export const Education = () => {
-    const [width, height] = useWindowSize();
+    const [width, height] = useWindowSize()
     var local_paperStyle = structuredClone(paperStyle)
-    if (width > 560){
-        local_paperStyle.width = 560
+    if (width > threshholds.th_w1){
+        local_paperStyle.width = threshholds.w1
     }
-    else if (width > 400) {
-        local_paperStyle.width = width * 0.7;
+    else if (width > threshholds.th_w2) {
+        local_paperStyle.width = width * threshholds.w2;
     }
     else{
-        local_paperStyle.width = 280;
+        local_paperStyle.width = threshholds.w3;
     }
     return (
-        <Grid item>
-            <div
-                style={local_paperStyle}
-            >
-                <Paper elevation={0} square={true}>
+        <Grid item sx={local_paperStyle}>
+            {/*<div*/}
+            {/*    style={local_paperStyle}*/}
+            {/*>*/}
+            {/*    <Paper elevation={0} square={true}>*/}
                     <h3 style={paperStyle.label}>Education</h3>
                     <EducationItem />
-                </Paper>
-            </div>
+                {/*</Paper>*/}
+            {/*</div>*/}
         </Grid>
     )
 }

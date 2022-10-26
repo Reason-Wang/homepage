@@ -1,5 +1,5 @@
 import Grid from "@mui/material/Grid";
-import {experienceStyle, paperStyle} from "./constants";
+import {experienceStyle, paperStyle, threshholds} from "./constants";
 import Paper from "@mui/material/Paper";
 import {Box, Link} from "@mui/material";
 import * as React from "react";
@@ -20,21 +20,21 @@ const ExperienceItem=({Institue, Start, End, Mentor, MentorLink, Topic}) =>{
 export const Experience=() => {
     const [width, height] = useWindowSize();
     var local_paperStyle = structuredClone(paperStyle)
-    if (width > 560){
-        local_paperStyle.width = 560
+    if (width > threshholds.th_w1){
+        local_paperStyle.width = threshholds.w1
     }
-    else if (width > 400) {
-        local_paperStyle.width = width * 0.7;
+    else if (width > threshholds.th_w2) {
+        local_paperStyle.width = width * threshholds.w2;
     }
     else{
-        local_paperStyle.width = 280;
+        local_paperStyle.width = threshholds.w3;
     }
     return (
-        <Grid item>
-            <div
-                style={local_paperStyle}
-            >
-                <Paper elevation={0} square={true}>
+        <Grid item sx={local_paperStyle}>
+            {/*<div*/}
+            {/*    style={local_paperStyle}*/}
+            {/*>*/}
+            {/*    <Paper elevation={0} square={true}>*/}
                     {/*<h3 style={paperStyle.label}>Experience</h3>*/}
                     {experienceList.map((item, index) =>(
                         <Box>
@@ -49,8 +49,8 @@ export const Experience=() => {
                             {index < experienceList.length-1 ? <Divider light /> : null}
                         </Box>
                     ))}
-                </Paper>
-            </div>
+                {/*</Paper>*/}
+            {/*</div>*/}
         </Grid>
     )
 }

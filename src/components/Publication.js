@@ -1,4 +1,4 @@
-import {publicationStyle, paperStyle} from "./constants";
+import {publicationStyle, paperStyle, threshholds} from "./constants";
 import Paper from "@mui/material/Paper";
 import {Accordion, AccordionDetails, AccordionSummary, Box, Grid, Typography} from "@mui/material";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -9,21 +9,20 @@ import {useWindowSize} from "./Components";
 export const Publication = () => {
     const [width, height] = useWindowSize();
     var local_paperStyle = structuredClone(paperStyle)
-    if (width > 560){
-        local_paperStyle.width = 560
+    if (width > threshholds.th_w1){
+        local_paperStyle.width = threshholds.w1
     }
-    else if (width > 400) {
-        local_paperStyle.width = width * 0.7;
+    else if (width > threshholds.th_w2) {
+        local_paperStyle.width = width * threshholds.w2;
     }
     else{
-        local_paperStyle.width = 280;
+        local_paperStyle.width = threshholds.w3;
     }
     return (
-        <Grid item>
-            <div
-                style={local_paperStyle}
-            >
-                <Paper elevation={0} square={true}>
+        <Grid item sx={local_paperStyle}>
+            {/*<div style={}>*/}
+            {/*>*/}
+            {/*    <Paper elevation={6} square={true}  sx={local_paperStyle}>*/}
                     <h3 style={paperStyle.label}>Publication</h3>
                     <div style={publicationStyle}>
                         <Accordion>
@@ -48,8 +47,8 @@ export const Publication = () => {
                         </Accordion>
                         {/*<p style={{margin: 0}}>&nbsp;</p>*/}
                     </div>
-                </Paper>
-            </div>
+                {/*</Paper>*/}
+            {/*</div>*/}
         </Grid>
     )
 }

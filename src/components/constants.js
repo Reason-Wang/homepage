@@ -50,7 +50,7 @@ export const infoStyle = {
         // fontFamily: 'Arial',
         fontSize: '18px',
         display: 'flex',
-        marginLeft: '20px',
+        marginLeft: '10px',
         marginTop: '-10px',
         alignItems: "center",
         lineHeight: "150%",
@@ -64,20 +64,28 @@ export default function SimpleMediaQuery() {
 export const paperStyle = {
     // writable: true,
     width: 500,
-    height: "100%",
+    height: 160,
     marginLeft: "10px",
-    marginBottom: "60px",
-    alignItems: "center",
+    marginBottom: "10px",
+    // alignItems: "center",
     textAlign: "left",
-    justifyContent: "center",
+    // justifyContent: "center",
     label: {
-        margin: "10px",
+        margin: "0px",
         fontSize: "30px",
         // fontFamily: "Arial",
         color: "#5a5a5a"
         // color: "#003666"
     }
 };
+
+export const threshholds = {
+    th_w1: 600,
+    th_w2: 400,
+    w1: 560,
+    w2: 0.7,
+    w3: 300,
+}
 
 export const educationStyle = {
     display: "flex",
