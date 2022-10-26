@@ -2,12 +2,13 @@ import EmailIcon from '@mui/icons-material/Email';
 import PlaceIcon from '@mui/icons-material/Place';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import ArticleIcon from '@mui/icons-material/Article';
+import {useMediaQuery} from "@mui/material";
 
 export const infoStyle = {
     margin: "20px",
     marginRight: "60px",
     signature:{
-      fontSize: "20px",
+      fontSize: "26px",
         margin: "10px",
         color: "#888",
         width: 700,
@@ -16,35 +17,35 @@ export const infoStyle = {
         // fontFamily: "Arial",
     },
     avatar:{
-        width: '180px',
-        height: '180px',
+        width: '240px',
+        height: '240px',
         color: "white",
         border: "4px solid #ccc",
         padding: "6px",
     },
     sign: {
-      fontSize: "10px",
+      fontSize: "15px",
         // width: 100,
     },
     info: {
-        fontFamily: 'Arial',
+        // fontFamily: 'Arial',
         display: 'flex',
         alignItems: "center",
-        margin: "6px",
+        margin: "2px",
         text: {
-            color: '#000',
-            fontSize: '12px',
+            color: '#444',
+            fontSize: '17px',
             margin: '2px',
         },
         icon: {
-            fontSize: '16px',
-            color: '#000',
+            fontSize: '18px',
+            color: '#444',
         }
     },
     about: {
         color: '#333',
         // fontFamily: 'Arial',
-        fontSize: '14px',
+        fontSize: '18px',
         display: 'flex',
         marginLeft: '20px',
         marginTop: '-10px',
@@ -53,16 +54,21 @@ export const infoStyle = {
     }
 };
 
+export default function SimpleMediaQuery() {
+    return useMediaQuery('(min-width:600px)')
+}
+
 export const paperStyle = {
-    width: 430,
+    // writable: true,
+    width: 500,
     height: "100%",
-    marginBottom: "40px",
+    marginBottom: "60px",
     alignItems: "center",
     textAlign: "left",
     justifyContent: "center",
     label: {
         margin: "10px",
-        fontSize: "22px",
+        fontSize: "30px",
         // fontFamily: "Arial",
         color: "#5a5a5a"
         // color: "#003666"
@@ -73,7 +79,7 @@ export const educationStyle = {
     display: "flex",
     flexDirection: "row",
     justifyContent: "left",
-    marginLeft: "14px",
+    marginLeft: "20px",
     item: {
         display: "flex",
         flexDirection: "column",
@@ -81,7 +87,7 @@ export const educationStyle = {
         // alignItems: "left",
         // textAlign: "left",
         marginBottom: "16px",
-        fontSize: "13px",
+        fontSize: "17px",
         // fontFamily: "Arial",
         text: {
             margin: "1px",
@@ -128,7 +134,7 @@ export const experienceStyle = {
     text:{
         margin: "1px",
         marginLeft: "10px",
-        fontSize: "13px",
+        fontSize: "17px",
         color: "#444",
         // fontFamily: "Arial"
     }
@@ -157,23 +163,23 @@ export const experienceList = [
 
 export const publicationStyle = {
     title: {
-        fontSize: "13px",
+        fontSize: "17px",
         fontFamily: "Times New Roman",
-        lineHeight: "125%",
+        lineHeight: "120%",
     },
     year: {
         margin: "2px",
-      fontSize: "11px",
+      fontSize: "16px",
         lineHeight: "140%",
     },
     author: {
-      fontSize: "11px",
+      fontSize: "16px",
         fontFamily: "Times New Roman",
         margin: "0px",
         lineHeight: "50%",
     },
     detail: {
-        fontSize: "8px",
+        fontSize: "16px",
         fontFamily: "Times New Roman",
     }
 }

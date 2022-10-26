@@ -3,13 +3,25 @@ import Paper from "@mui/material/Paper";
 import {Accordion, AccordionDetails, AccordionSummary, Box, Grid, Typography} from "@mui/material";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import * as React from "react";
+import {useWindowSize} from "./Components";
 
 
 export const Publication = () => {
+    const [width, height] = useWindowSize();
+    var local_paperStyle = structuredClone(paperStyle)
+    if (width > 1000){
+        local_paperStyle.width = 560
+    }
+    else if (width > 560) {
+        local_paperStyle.width = width * 0.8;
+    }
+    else{
+        local_paperStyle.width = 400;
+    }
     return (
         <Grid item>
             <div
-                style={paperStyle}
+                style={local_paperStyle}
             >
                 <Paper elevation={0} square={true}>
                     <h3 style={paperStyle.label}>Publication</h3>

@@ -5,6 +5,7 @@ import {Box, Link} from "@mui/material";
 import * as React from "react";
 import {experienceList} from "./constants";
 import Divider from '@mui/material/Divider';
+import {useWindowSize} from "./Components";
 
 const ExperienceItem=({Institue, Start, End, Mentor, MentorLink, Topic}) =>{
     return (
@@ -17,10 +18,21 @@ const ExperienceItem=({Institue, Start, End, Mentor, MentorLink, Topic}) =>{
 }
 
 export const Experience=() => {
+    const [width, height] = useWindowSize();
+    var local_paperStyle = structuredClone(paperStyle)
+    if (width > 1000){
+        local_paperStyle.width = 560
+    }
+    else if (width > 600) {
+        local_paperStyle.width = width * 0.8;
+    }
+    else{
+        local_paperStyle.width = 400;
+    }
     return (
         <Grid item>
             <div
-                style={paperStyle}
+                style={local_paperStyle}
             >
                 <Paper elevation={0} square={true}>
                     {/*<h3 style={paperStyle.label}>Experience</h3>*/}

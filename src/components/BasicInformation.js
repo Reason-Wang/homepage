@@ -2,18 +2,19 @@ import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
 import Grid from '@mui/material/Grid';
 import { deepOrange} from '@mui/material/colors';
-import {basicInfo, paperStyle, infoStyle} from "./constants";
+import SimpleMediaQuery, {basicInfo, paperStyle, infoStyle} from "./constants";
 import {Box, Divider, InputAdornment, Link, Typography} from "@mui/material";
 import Paper from '@mui/material/Paper'
 import {Breadcrumbs} from '@mui/material';
+import {useLayoutEffect, useState} from "react";
+import {useWindowSize} from "./Components";
 
 export const Signature = () =>{
     return (
-        <Grid item>
+        <Grid item justifyContent="flex-start">
             <Breadcrumbs aria-label="breadcrumb">
                 <Typography sx={infoStyle.signature} color="textPrimary">Renxi Wang </Typography>
             </Breadcrumbs>
-            {/*<Divider variant="light" />*/}
         </Grid>
     )
 }
@@ -40,19 +41,31 @@ export const BasicInfoDisplay = () =>{
     )
 }
 
+
 export const AboutMe = () => {
+    const [width, height] = useWindowSize();
+    var local_paperStyle = structuredClone(paperStyle)
+    if (width > 1000){
+        local_paperStyle.width = 560
+    }
+    else if (width > 600) {
+        local_paperStyle.width = width * 0.8;
+    }
+    else{
+        local_paperStyle.width = 400;
+    }
     return (
         <Grid item>
-            <div
-                style={paperStyle}
-            >
-            <Paper elevation={0} square={true}>
-                <h3 style={paperStyle.label}>About Me</h3>
-                    <div style={infoStyle.about}>
-                    <p>I am a senior student in School of Computer Science and Engineering of Northeastern University, China. My interests span from information retrieval to question answering, along with reinforcement learning, meachine learning.</p>
-                    </div>
-            </Paper>
-            </div>
+                <div
+                    style={local_paperStyle}
+                >
+                    <Paper elevation={0} square={true}>
+                        <h3 style={paperStyle.label}>About Me</h3>
+                        <div style={infoStyle.about}>
+                            <p>I am a senior student in School of Computer Science and Engineering of Northeastern University, China. My interests span from information retrieval to question answering, along with reinforcement learning, meachine learning.</p>
+                        </div>
+                    </Paper>
+                </div>
         </Grid>
     )
 }

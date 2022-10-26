@@ -10,13 +10,15 @@ import {BottomBanner, Occupation} from "./components/Components";
 
 function App() {
   return (
-      // <Grid className="App" container direction="column" alignItems="center" justifyContent="center">
-      <div style={{display: "flex", flexDirection: "column",  justifyContent: "center"}}>
-          <Grid container direction="column" justifyContent="center" alignItems="center">
-              <Signature/>
-          </Grid>
+      <Grid className="App" container direction="column" alignItems="center" justifyContent="left">
+      {/*//  <div style={{display: "flex", flexDirection: "column",  justifyContent: "center"}}>*/}
+      {/*    <Grid item direction="column" justifyContent="center" alignItems="center">*/}
+
+          {/*</Grid>*/}
+          <Signature/>
           <Divider variant="light" />
           <Grid container direction="row" justifyContent="center">
+
               <BasicInfoDisplay />
                 <Grid item direction="column" alignItems="flex-start" justifyConttent="flex-start">
                     <AboutMe />
@@ -26,11 +28,11 @@ function App() {
                     <Occupation />
                 </Grid>
           </Grid>
-          <Grid container direction="column" justifyContent="center" alignItems="center">
+          {/*<Grid item direction="column" justifyContent="center" alignItems="center">*/}
                 <BottomBanner />
-          </Grid>
-      </div>
-      // </Grid>
+          {/*</Grid>*/}
+      {/*// </div>*/}
+      </Grid>
   );
 }
 
