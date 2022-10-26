@@ -6,9 +6,14 @@ import {Education} from "./components/Education";
 import {Experience} from "./components/Experience";
 import {Publication} from "./components/Publication";
 import {Box, Divider} from "@mui/material";
-import {BottomBanner, Occupation} from "./components/Components";
+import {BottomBanner, Occupation, useWindowSize} from "./components/Components";
 
 function App() {
+    const [width, height] = useWindowSize()
+    var align = true
+    if(width < 500){
+        align = false
+    }
   return (
       <Grid className="App" container direction="column" justifyContent="left">
       {/*//  <div style={{display: "flex", flexDirection: "column",  justifyContent: "center"}}>*/}
@@ -17,10 +22,9 @@ function App() {
           {/*</Grid>*/}
           <Signature/>
           <Divider variant="light" />
-          <Grid container direction="row" justifyContent="center">
-
+          <Grid container direction="row"  justifyContent="center">
               <BasicInfoDisplay />
-                <Grid item direction="column" alignItems="flex-start" justifyConttent="flex-start">
+                <Grid item={align} container={!align} direction="column" >
                     <AboutMe />
                     <Education />
                     <Experience />

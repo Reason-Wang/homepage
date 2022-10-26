@@ -22,14 +22,14 @@ const EducationItem = () =>{
 export const Education = () => {
     const [width, height] = useWindowSize();
     var local_paperStyle = structuredClone(paperStyle)
-    if (width > 1000){
+    if (width > 560){
         local_paperStyle.width = 560
     }
-    else if (width > 600) {
+    else if (width > 400) {
         local_paperStyle.width = width * 0.7;
     }
     else{
-        local_paperStyle.width = 400;
+        local_paperStyle.width = 280;
     }
     return (
         <Grid item>

@@ -65,6 +65,7 @@ export const paperStyle = {
     // writable: true,
     width: 500,
     height: "100%",
+    marginLeft: "10px",
     marginBottom: "60px",
     alignItems: "center",
     textAlign: "left",

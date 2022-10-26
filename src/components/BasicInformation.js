@@ -27,11 +27,11 @@ export const Signature = () =>{
 export const BasicInfoDisplay = () =>{
     const [width, height] = useWindowSize();
     var local_infoStyle = structuredClone(infoStyle)
-    if (width > 700){
-        local_infoStyle.width = 200
+    if (width > 500){
+        local_infoStyle.width = 240
     }
     else if (width > 200) {
-        local_infoStyle.width = width * 0.3;
+        local_infoStyle.width = width * 0.40+20;
     }
     else{
         local_infoStyle.width = 100;
@@ -65,14 +65,14 @@ export const BasicInfoDisplay = () =>{
 export const AboutMe = () => {
     const [width, height] = useWindowSize();
     var local_paperStyle = structuredClone(paperStyle)
-    if (width > 1000){
+    if (width > 560){
         local_paperStyle.width = 560
     }
-    else if (width > 600) {
-        local_paperStyle.width = width * 0.7;
+    else if (width > 400) {
+        local_paperStyle.width = width * 0.8;
     }
     else{
-        local_paperStyle.width = 400;
+        local_paperStyle.width = 280;
     }
     return (
         <Grid item>
