@@ -5,12 +5,15 @@ import Paper from "@mui/material/Paper";
 import {useLayoutEffect, useState} from "react";
 
 export const BottomBanner=() =>{
+    // const [width, height] = useWindowSize();
+    // var custom_height = height * 0.98
+    // var custom_height = document.documentElement.offsetHeight * 0.08
     return (
-        <div style={{backgroundColor: "#f1f1f1", margin: 0, bottom: 0, position: "relative", width: "100%", height: "80px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-            <Grid item>
-                <p style={{margin: 0, color: "#888", fontSize: "13px"}}>© Renxi Wang. Powered by React & MUI.</p>
-            </Grid>
-        </div>
+        // <div style={}>
+        //     <Grid item sx={{backgroundColor: "#f1f1f1", margin: 0, width: "100%", height: "100px", display: "flex", alignItems: "center", justifyContent: "center"}}>
+                <p style={{margin: 0, color: "#888", fontSize: "14px"}}>© Renxi Wang. Powered by React & MUI.</p>
+            // </Grid>
+        // </div>
     )
 }
 
@@ -32,7 +35,7 @@ export const Occupation=() =>{
             {/*    */}
             {/*>*/}
             {/*    <Paper elevation={0} square={true} sx={{height: "180px", width: 20}}>*/}
-            {/*    </Paper>*/}
+                {/*</Paper>*/}
             {/*</div>*/}
         </Grid>
     )

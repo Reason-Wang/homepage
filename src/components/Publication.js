@@ -18,6 +18,13 @@ export const Publication = () => {
     else{
         local_paperStyle.width = threshholds.w3;
     }
+    if (width < 500 && width >= 350)
+    {
+        local_paperStyle.height += (500 - width)*3;
+    }
+    else if(width < 350){
+        local_paperStyle.height += 450
+    }
     return (
         <Grid item sx={local_paperStyle}>
             {/*<div style={}>*/}
@@ -34,7 +41,7 @@ export const Publication = () => {
                                 <div >
                                     <div style={{display: "flex", flexDirection: "row"}}>
                                         <Typography sx={publicationStyle.title}>Global-Local Modeling with Prompt-Based Knowledge Enhencement for Emotion Inference in Conversation</Typography>
-                                        <Typography sx={publicationStyle.year}>Submitted to EACL 2022</Typography>
+                                        <Typography sx={publicationStyle.year}>Submitted to EACL 2023</Typography>
                                     </div>
                                     <Typography sx={publicationStyle.author}>Renxi Wang*, Shi Feng</Typography>
                                 </div>

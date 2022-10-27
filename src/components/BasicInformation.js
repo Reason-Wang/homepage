@@ -2,7 +2,7 @@ import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
 import Grid from '@mui/material/Grid';
 import { deepOrange} from '@mui/material/colors';
-import SimpleMediaQuery, {basicInfo, paperStyle, infoStyle} from "./constants";
+import SimpleMediaQuery, {basicInfo, paperStyle, infoStyle, threshholds} from "./constants";
 import {Box, Divider, InputAdornment, Link, Typography} from "@mui/material";
 import Paper from '@mui/material/Paper'
 import {Breadcrumbs} from '@mui/material';
@@ -11,12 +11,15 @@ import {useWindowSize} from "./Components";
 
 export const Signature = () =>{
     const [width, height] = useWindowSize();
-    var width_ratio = "70%";
+    var width_ratio = "60%";
+    if(width > 1000){
+        width_ratio = width * 0.4
+    }
     if(width < 500){
         width_ratio = "50%"
     }
     return (
-        <Grid item direction="row" justifyContent="flex-start" sx={{backgroundColor: "#fff", margin: 0, width: "100%", height: "60px", display: "flex", justifyContent: "center", alignItems: "center"}}>
+        <Grid item direction="row" justifyContent="flex-start" sx={{backgroundColor: "#fff", margin:0, width: "100%", height: "80px", display: "flex", justifyContent: "center", alignItems: "center"}}>
             {/*<div }>*/}
                 <Grid item>
                     <p style={{margin: 0, color: "#888", fontSize: "24px", fontWeight: "bold"}}>Renxi Wang</p>
@@ -44,9 +47,9 @@ export const BasicInfoDisplay = () =>{
     local_infoStyle.avatar.width = local_infoStyle.width * 1
     local_infoStyle.avatar.height = local_infoStyle.width * 1
     return (
-        <Grid item>
-            <div style={local_infoStyle}>
-            <Paper elevation={0} square={true}>
+        <Grid item direction="column" sx={local_infoStyle}>
+            {/*<div style={local_infoStyle}>*/}
+            {/*<Paper elevation={0} square={true}>*/}
             <Avatar sx={local_infoStyle.avatar} >
                 OP
             </Avatar>
@@ -60,8 +63,8 @@ export const BasicInfoDisplay = () =>{
                     </div>
                 )
             })}
-            </Paper>
-        </div>
+            {/*</Paper>*/}
+        {/*</div>*/}
         </Grid>
     )
 }
@@ -70,14 +73,14 @@ export const BasicInfoDisplay = () =>{
 export const AboutMe = () => {
     const [width, height] = useWindowSize();
     var local_paperStyle = structuredClone(paperStyle)
-    if (width > 600){
-        local_paperStyle.width = 560
+    if (width > threshholds.th_w1){
+        local_paperStyle.width = threshholds.w1
     }
-    else if (width > 400) {
-        local_paperStyle.width = width * 0.8;
+    else if (width > threshholds.th_w2) {
+        local_paperStyle.width = width * threshholds.w2;
     }
     else{
-        local_paperStyle.width = 280;
+        local_paperStyle.width = threshholds.w3;
     }
     if (width < 500 && width > 400)
     {

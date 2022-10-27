@@ -5,10 +5,11 @@ import ArticleIcon from '@mui/icons-material/Article';
 import {useMediaQuery} from "@mui/material";
 
 export const infoStyle = {
-    margin: "20px",
-    marginRight: "60px",
+    margin: "10px",
+    marginRight: "80px",
     width: 200,
     display: "flex",
+    alignItems: "flex-start",
 
     signature:{
       fontSize: "26px",
@@ -50,10 +51,11 @@ export const infoStyle = {
         // fontFamily: 'Arial',
         fontSize: '18px',
         display: 'flex',
-        marginLeft: '10px',
+        marginLeft: '0px',
         marginTop: '-10px',
         alignItems: "center",
         lineHeight: "150%",
+        wordBreak: "break-all",
     }
 };
 
@@ -66,7 +68,7 @@ export const paperStyle = {
     width: 500,
     height: 160,
     marginLeft: "10px",
-    marginBottom: "10px",
+    marginBottom: "25px",
     // alignItems: "center",
     textAlign: "left",
     // justifyContent: "center",
@@ -91,7 +93,8 @@ export const educationStyle = {
     display: "flex",
     flexDirection: "row",
     justifyContent: "left",
-    marginLeft: "20px",
+    marginLeft: "0px",
+    marginTop: "20px",
     item: {
         display: "flex",
         flexDirection: "column",
@@ -135,7 +138,7 @@ export const basicInfo = [
         icon: <ArticleIcon sx={infoStyle.info.icon}/>,
         label: 'CV',
         // link: "C:\\Users\\WRX\\Projects\\react_project\\homepage\\src\\images\\NEU.png",
-        link: "../../images/NEU.png"
+        link: "/root/files/CV.pdf"
     }
 ]
 
@@ -145,7 +148,7 @@ export const experienceStyle = {
     margin: "10px",
     text:{
         margin: "1px",
-        marginLeft: "10px",
+        marginLeft: "0px",
         fontSize: "17px",
         color: "#444",
         // fontFamily: "Arial"

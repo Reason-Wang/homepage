@@ -15,16 +15,16 @@ function App() {
         align = false
     }
   return (
-      <Grid className="App" container direction="column" justifyContent="left">
+      <Grid className="App" container direction="column" justifyContent="space-between">
       {/*//  <div style={{display: "flex", flexDirection: "column",  justifyContent: "center"}}>*/}
       {/*    <Grid item direction="column" justifyContent="center" alignItems="center">*/}
-          <Grid item direction="column">
+          <Grid container direction="column">
               <Signature/>
               <Divider variant="light" />
           </Grid>
-          <Grid container direction="row"  justifyContent="center">
+          <Grid container direction="row"  justifyContent="center" sx={{marginTop: "40px"}}>
               <BasicInfoDisplay />
-                <Grid item={align} container={!align} direction="column" justifyContent="flex-start" alignItems="flex-start">
+                <Grid item={align} container={!align} direction="column" justifyContent="space-between" alignItems="flex-start">
                     <AboutMe />
                     <Education />
                     <Experience />
@@ -32,7 +32,7 @@ function App() {
                     <Occupation />
                 </Grid>
           </Grid>
-          <Grid>
+          <Grid sx={{backgroundColor: "#f1f1f1", margin: 0, width: "100%", height: "100px", position: "relative", display: "flex", alignItems: "center", justifyContent: "center"}}>
               <BottomBanner />
           </Grid>
       </Grid>
