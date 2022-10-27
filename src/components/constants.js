@@ -3,6 +3,7 @@ import PlaceIcon from '@mui/icons-material/Place';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import ArticleIcon from '@mui/icons-material/Article';
 import {useMediaQuery} from "@mui/material";
+import CV from "../files/CV.pdf"
 
 export const infoStyle = {
     margin: "10px",
@@ -138,7 +139,7 @@ export const basicInfo = [
         icon: <ArticleIcon sx={infoStyle.info.icon}/>,
         label: 'CV',
         // link: "C:\\Users\\WRX\\Projects\\react_project\\homepage\\src\\images\\NEU.png",
-        link: "/root/files/CV.pdf"
+        link: CV,
     }
 ]
 
