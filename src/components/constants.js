@@ -22,14 +22,13 @@ export const infoStyle = {
         // fontFamily: "Arial",
     },
     avatar:{
-        width: '240px',
-        height: '240px',
-        color: "white",
-        border: "4px solid #ccc",
-        padding: "6px",
+        border: "1px solid #eaeaea",
+        padding: 4,
+        borderRadius: "50%"
     },
+
     sign: {
-      fontSize: "15px",
+        fontSize: "15px",
         // width: 100,
     },
     info: {
@@ -164,7 +163,7 @@ export const experienceList = [
         End: "Oct 2022",
         Mentor: "Shi Feng",
         MentorLink: "https://dm.neuzsb.com/cse/fengshi/",
-        Topic: "Emotion Detection"
+        Topic: "Emotion Detection in Dialogue System"
     },
     {
         id: 1,
@@ -173,7 +172,7 @@ export const experienceList = [
         End: "Dec 2021",
         Mentor: "Zhenghao Liu",
         MentorLink: "https://edwardzh.github.io/",
-        Topic: "Question Answering"
+        Topic: "Open-domain Question Answering"
     }
 ]
 

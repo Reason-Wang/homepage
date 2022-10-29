@@ -29,12 +29,12 @@ function App() {
                     <Education />
                     <Experience />
                     <Publication />
-                    <Occupation />
+                    {/*<Occupation />*/}
                 </Grid>
           </Grid>
-          <Grid sx={{backgroundColor: "#f1f1f1", margin: 0, width: "100%", height: "100px", position: "relative", display: "flex", alignItems: "center", justifyContent: "center"}}>
-              <BottomBanner />
-          </Grid>
+          {/*<Grid sx={{backgroundColor: "#f1f1f1", margin: 0, width: "100%", height: "100px", position: "relative", display: "flex", alignItems: "center", justifyContent: "center"}}>*/}
+          {/*    <BottomBanner />*/}
+          {/*</Grid>*/}
       </Grid>
   );
 }

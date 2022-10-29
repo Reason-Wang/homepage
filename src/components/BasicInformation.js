@@ -4,6 +4,7 @@ import Grid from '@mui/material/Grid';
 import { deepOrange} from '@mui/material/colors';
 import SimpleMediaQuery, {basicInfo, paperStyle, infoStyle, threshholds} from "./constants";
 import {Box, Divider, InputAdornment, Link, Typography} from "@mui/material";
+import avatar from "../images/avatar.jpg"
 import Paper from '@mui/material/Paper'
 import {Breadcrumbs} from '@mui/material';
 import {useLayoutEffect, useState} from "react";
@@ -36,7 +37,7 @@ export const BasicInfoDisplay = () =>{
     const [width, height] = useWindowSize();
     var local_infoStyle = structuredClone(infoStyle)
     if (width > 500){
-        local_infoStyle.width = 240
+        local_infoStyle.width = 220
     }
     else if (width > 200) {
         local_infoStyle.width = width * 0.40+20;
@@ -50,9 +51,10 @@ export const BasicInfoDisplay = () =>{
         <Grid item direction="column" sx={local_infoStyle}>
             {/*<div style={local_infoStyle}>*/}
             {/*<Paper elevation={0} square={true}>*/}
-            <Avatar sx={local_infoStyle.avatar} >
-                OP
-            </Avatar>
+            {/*<Avatar sx={local_infoStyle.avatar} src={avatar}>*/}
+            {/*    OP*/}
+            {/*</Avatar>*/}
+            <img style={local_infoStyle.avatar} src={avatar}></img>
             <p style={infoStyle.sign}>Undergraduate, Northeastern University</p>
             {basicInfo.map((item, index)=>{
                 return (
@@ -97,7 +99,7 @@ export const AboutMe = () => {
                 {/*    <Paper elevation={0} square={true}>*/}
                         <h3 style={paperStyle.label}>About Me</h3>
                         <div style={infoStyle.about}>
-                            <p>I am a senior student in School of Computer Science and Engineering of Northeastern University, China. My interests span from information retrieval to question answering, along with reinforcement learning, meachine learning.</p>
+                            <p>I am a senior student at School of Computer Science and Engineering of Northeastern University, China. My interests span from information retrieval to question answering, along with reinforcement learning, machine learning.</p>
                         </div>
                     {/*</Paper>*/}
                 {/*// </div>*/}
