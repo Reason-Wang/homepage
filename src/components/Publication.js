@@ -43,7 +43,7 @@ export const Publication = () => {
                                         <Typography sx={publicationStyle.title}>Global-Local Modeling with Prompt-Based Knowledge Enhencement for Emotion Inference in Conversation</Typography>
                                         <Typography sx={publicationStyle.year}>Submitted to EACL 2023</Typography>
                                     </div>
-                                    <Typography sx={publicationStyle.author}>Renxi Wang*, Shi Feng</Typography>
+                                    <Typography sx={publicationStyle.author}>Renxi Wang, Shi Feng</Typography>
                                 </div>
                             </AccordionSummary>
                             <AccordionDetails>
