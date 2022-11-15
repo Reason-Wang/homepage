@@ -1,13 +1,9 @@
 import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
 import Grid from '@mui/material/Grid';
-import { deepOrange} from '@mui/material/colors';
 import SimpleMediaQuery, {basicInfo, paperStyle, infoStyle, threshholds} from "./constants";
 import {Box, Divider, InputAdornment, Link, Typography} from "@mui/material";
 import avatar from "../images/avatar.jpg"
-import Paper from '@mui/material/Paper'
-import {Breadcrumbs} from '@mui/material';
-import {useLayoutEffect, useState} from "react";
 import {useWindowSize} from "./Components";
 
 export const Signature = () =>{
@@ -23,7 +19,7 @@ export const Signature = () =>{
         <Grid item direction="row" justifyContent="flex-start" sx={{backgroundColor: "#fff", margin:0, width: "100%", height: "80px", display: "flex", justifyContent: "center", alignItems: "center"}}>
             {/*<div }>*/}
                 <Grid item>
-                    <p style={{margin: 0, color: "#888", fontSize: "24px", fontWeight: "bold"}}>Renxi Wang</p>
+                    <Link underline="none" href={"https://github.com/Reason-Wang/homepage"} style={{margin: 0, color: "#888", fontSize: "24px", fontWeight: "bold"}}>Renxi Wang</Link>
                 </Grid>
                 <Grid item sx={{width: width_ratio}}>
                     <p></p>
@@ -99,7 +95,7 @@ export const AboutMe = () => {
                 {/*    <Paper elevation={0} square={true}>*/}
                         <h3 style={paperStyle.label}>About Me</h3>
                         <div style={infoStyle.about}>
-                            <p>I am a senior student at School of Computer Science and Engineering of Northeastern University, China. My interests span from information retrieval to question answering, along with reinforcement learning, machine learning.</p>
+                            <p>I am a senior student at School of Computer Science and Engineering of Northeastern University, China. My interests span from information retrieval to question answering, natural language processing, reinforcement learning and machine learning.</p>
                         </div>
                     {/*</Paper>*/}
                 {/*// </div>*/}
