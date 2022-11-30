@@ -66,7 +66,7 @@ export default function SimpleMediaQuery() {
 export const paperStyle = {
     // writable: true,
     width: 500,
-    height: 160,
+    height: 180,
     marginLeft: "10px",
     marginBottom: "25px",
     // alignItems: "center",
@@ -162,7 +162,7 @@ export const experienceList = [
         Start: "June 2022",
         End: "Oct 2022",
         Mentor: "Shi Feng",
-        MentorLink: "https://dm.neuzsb.com/cse/fengshi/",
+        MentorLink: "https://neu-datamining.github.io/cse/fengshi/",
         Topic: "Emotion Detection in Dialogue System"
     },
     {

@@ -35,7 +35,7 @@ export const Experience=() => {
             {/*    style={local_paperStyle}*/}
             {/*>*/}
             {/*    <Paper elevation={0} square={true}>*/}
-                    {/*<h3 style={paperStyle.label}>Experience</h3>*/}
+                    <h3 style={paperStyle.label}>Experience</h3>
                     {experienceList.map((item, index) =>(
                         <Box>
                             <ExperienceItem

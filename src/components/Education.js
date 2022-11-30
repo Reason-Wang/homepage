@@ -14,7 +14,7 @@ const EducationItem = () =>{
                 <p style={educationStyle.item.text}>Northeastern University</p>
                 <p style={educationStyle.item.text}>2019-9-7 ~ present</p>
                 <p style={educationStyle.item.text}>School of Computer Science and Engineering</p>
-                <p style={educationStyle.item.text}>Computer Science</p>
+                <p style={educationStyle.item.text}>Undergraduate in Computer Science</p>
             </div>
         </div>
     )
