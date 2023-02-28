@@ -33,10 +33,10 @@ export const BasicInfoDisplay = () =>{
     const [width, height] = useWindowSize();
     var local_infoStyle = structuredClone(infoStyle)
     if (width > 500){
-        local_infoStyle.width = 220
+        local_infoStyle.width = 200
     }
-    else if (width > 200) {
-        local_infoStyle.width = width * 0.40+20;
+    else if (width > 250) {
+        local_infoStyle.width = width * 0.40;
     }
     else{
         local_infoStyle.width = 100;

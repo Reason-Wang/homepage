@@ -41,7 +41,7 @@ export const Publication = () => {
                                 <div >
                                     <div style={{display: "flex", flexDirection: "row"}}>
                                         <Typography sx={publicationStyle.title}>Global-Local Modeling with Prompt-Based Knowledge Enhencement for Emotion Inference in Conversation</Typography>
-                                        <Typography sx={publicationStyle.year}>Submitted to EACL 2023</Typography>
+                                        <Typography sx={publicationStyle.year}>Accepted by EACL 2023 findings</Typography>
                                     </div>
                                     <Typography sx={publicationStyle.author}>Renxi Wang, Shi Feng</Typography>
                                 </div>
